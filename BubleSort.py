@@ -1,26 +1,20 @@
-numbers = [8, 0, 2, 1, 5, 7]
-# for number in numbers:
-#     if number in (1, 3, 5,):
-#         print('have')
-#     else: 
-#         print('no have')
 
+def BubbleSort(numbers: list[int]) -> list[int]:
+    """Сортирует список"""
 
-# print(numbers[0])
+    for i in numbers:
+        a = 0
+        for index in range(0, len(numbers) - 1):
+            num_1 = numbers[index]
+            num_2 = numbers[index + 1]
+            if num_1 > num_2:
+                numbers[index] = num_2
+                numbers[index+ 1] = num_1
+                a =+ 1
 
-# for index in range(0, len(numbers)):
-#     print(numbers[index])
+        if a == 0:
+            break
 
-for i in numbers:
-    a = 0
-    for index in range(0, len(numbers) - 1):
-        num_1 = numbers[index]
-        num_2 = numbers[index + 1]
-        if num_1 > num_2:
-            numbers[index] = num_2
-            numbers[index+ 1] = num_1
-            a =+ 1
-        print(numbers)
-        
-    if a == 0:
-        break        
+    return numbers
+
+print(BubbleSort([8, 0, 2, 1, 5, 7]))
