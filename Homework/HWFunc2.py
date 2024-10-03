@@ -7,15 +7,11 @@ def SumLists(list_one: list, list_two: list) -> list:
 
     list_three = []
     for char in list_one:
-        if char in list_three:
-            pass
-        else:
+        if char not in list_three:
             list_three.append(char)
    
     for char in list_two:
-        if char in list_three:
-            pass
-        else:
+        if char not in list_three:
             list_three.append(char)
 
     return list_three
